@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/toast.js"></script>
+</head>
+
+<body>
+    <div>
+        <div onclick='showSuccessToast();' class="btn btn--success">Show success toast</div>
+        <div onclick='showInfoToast();' class="btn btn--info">Show info toast</div>
+        <div onclick='showWarningToast();' class="btn btn--warn">Show warning toast</div>
+        <div onclick='showErrorToast();' class="btn btn--error">Show error toast</div>
+    </div>
+    <div id="toast">
+
+
+    </div>
+    <script>
+        function showSuccessToast() {
+            toast({
+                title: "Thành công!",
+                message: "Đã đăng nhập thành công.",
+                type: "success",
+                duration: 5000
+            });
+        }
+
+        function showErrorToast() {
+            toast({
+                title: "Thất bại!",
+                message: "Đã xảy ra lỗi, vui lòng thử lại.",
+                type: "error",
+                duration: 5000
+            })
+        }
+
+        function showInfoToast() {
+            toast({
+                title: "Thông tin!",
+                message: "Trang chủ của tôi.",
+                type: "info",
+                duration: 5000
+            });
+        }
+
+        function showWarningToast() {
+            toast({
+                title: 'Cảnh báo!',
+                message: 'Bạn đã nhập sai nhiều lần, vui lòng liên hệ quản trị viên.',
+                type: 'warning',
+                duration: 5000
+
+            })
+        }
+    </script>
+
+</body>
+
+</html>
